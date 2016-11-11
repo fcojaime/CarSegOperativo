@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>historico</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-2504AB44
+</script>
+<script src="ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-D6484687
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-5A541DE7
+    $('body').ccsBind(function() {
+        features["Panel1Panel2DialogPanel1"] = $('*:ccsControl(Panel1, Panel2)');
+        features["Panel1UpdatePanel1"] = $('*:ccsControl(Panel1)');
+        features["Panel1condition_for_show"] = $('*:ccsControl(Panel1)');
+        features["Panel1condition_for_hide"] = $('*:ccsControl(Panel1)');
+        features["Panel1ccc_link_Condition"] = $('*:ccsControl(Panel1)');
+        features["Panel1ccc_submit_Condition"] = $('*:ccsControl(Panel1)');
+        features["Panel1ccc_others_Condition"] = $('*:ccsControl(Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-D7A1AF65
+    params["Panel1Panel2DialogPanel1"] = { 
+        title: "Agregar/Editar SO Fact Sabana New ",
+        modal: true,
+        autoOpen: false
+    };
+    params["Panel1UpdatePanel1"] = {
+        name: "Panel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-480F954F
+    features["Panel1Panel2DialogPanel1"].ccsBind(function() {
+        this.ccsDialog(params["Panel1Panel2DialogPanel1"]);
+    });
+    features["Panel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["Panel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//DialogPanel1 show Entry Point @104-C665C449
+    actions["Panel1Panel2DialogPanel1_show"] = function () {
+        features["Panel1Panel2DialogPanel1"].ccsDialog("show");
+        return false;
+    };
+//End DialogPanel1 show Entry Point
+
+//DialogPanel1 hide Entry Point @104-C5416BBC
+    actions["Panel1Panel2DialogPanel1_hide"] = function () {
+        features["Panel1Panel2DialogPanel1"].ccsDialog("hide");
+    };
+//End DialogPanel1 hide Entry Point
+
+//condition_for_show start Entry Point Start @77-4617342F
+    actions["Panel1condition_for_show_start"] = function (eventType, parameters) {
+//End condition_for_show start Entry Point Start
+
+//condition_for_show start Entry Point Body @77-F9058955
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Panel1)");
+        if (true==(params["click"] == "link")) {
+            self.trigger($.Event("true.condition_for_show"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_show"), {});
+        }
+//End condition_for_show start Entry Point Body
+
+//condition_for_show start Entry Point End @77-6A43FC60
+    };
+//End condition_for_show start Entry Point End
+
+//condition_for_hide start Entry Point Start @82-5A53631F
+    actions["Panel1condition_for_hide_start"] = function (eventType, parameters) {
+//End condition_for_hide start Entry Point Start
+
+//condition_for_hide start Entry Point Body @82-4B4C4DB5
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Panel1)");
+        if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0)) {
+            self.trigger($.Event("true.condition_for_hide"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_hide"), {});
+        }
+//End condition_for_hide start Entry Point Body
+
+//condition_for_hide start Entry Point End @82-6A43FC60
+    };
+//End condition_for_hide start Entry Point End
+
+//ccc_link_Condition start Entry Point Start @87-505B3325
+    actions["Panel1ccc_link_Condition_start"] = function (eventType, parameters) {
+//End ccc_link_Condition start Entry Point Start
+
+//ccc_link_Condition start Entry Point Body @87-4B8521D3
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Panel1)");
+        if (true==(params["click"] = "link")) {
+            self.trigger($.Event("true.ccc_link_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_link_Condition"), {});
+        }
+//End ccc_link_Condition start Entry Point Body
+
+//ccc_link_Condition start Entry Point End @87-6A43FC60
+    };
+//End ccc_link_Condition start Entry Point End
+
+//ccc_submit_Condition start Entry Point Start @98-D5BAC60E
+    actions["Panel1ccc_submit_Condition_start"] = function (eventType, parameters) {
+//End ccc_submit_Condition start Entry Point Start
+
+//ccc_submit_Condition start Entry Point Body @98-D25EF30D
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Panel1)");
+        if (true==(params["click"] = "submit")) {
+            self.trigger($.Event("true.ccc_submit_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_submit_Condition"), {});
+        }
+//End ccc_submit_Condition start Entry Point Body
+
+//ccc_submit_Condition start Entry Point End @98-6A43FC60
+    };
+//End ccc_submit_Condition start Entry Point End
+
+//ccc_others_Condition start Entry Point Start @113-52A5E8CF
+    actions["Panel1ccc_others_Condition_start"] = function (eventType, parameters) {
+//End ccc_others_Condition start Entry Point Start
+
+//ccc_others_Condition start Entry Point Body @113-D9CD92AF
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Panel1)");
+        if (true==(params["click"] = "")) {
+            self.trigger($.Event("true.ccc_others_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_others_Condition"), {});
+        }
+//End ccc_others_Condition start Entry Point Body
+
+//ccc_others_Condition start Entry Point End @113-6A43FC60
+    };
+//End ccc_others_Condition start Entry Point End
+
+//Event Binding @1-252F77F2
+    features["Panel1condition_for_show"].ccsBind(function() {
+        this.bind("true.condition_for_show", actions["Panel1Panel2DialogPanel1_show"]);
+    });
+    features["Panel1condition_for_hide"].ccsBind(function() {
+        this.bind("true.condition_for_hide", actions["Panel1Panel2DialogPanel1_hide"]);
+    });
+    features["Panel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["Panel1condition_for_show_start"]);
+    });
+    features["Panel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["Panel1condition_for_hide_start"]);
+    });
+    features["Panel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("show.ccsDialog", actions["Panel1ccc_others_Condition_start"]);
+    });
+    features["Panel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("hide.ccsDialog", actions["Panel1ccc_others_Condition_start"]);
+    });
+    $('*:ccsControl(Panel1, SO_Fact_Sabana_new, SO_Fact_Sabana_new_Insert)').ccsBind(function() {
+        this.bind("click", actions["Panel1ccc_link_Condition_start"]);
+    });
+    $('#Panel1SO_Fact_Sabana_newID_Proyecto').ccsBind(function() {
+        this.bind("click", actions["Panel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Panel1, Panel2, SO_Fact_Sabana_new1)').ccsBind(function() {
+        this.bind("submit", actions["Panel1ccc_submit_Condition_start"]);
+    });
+//End Event Binding
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Fresh1/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="Styles/Fresh1/jquery-ui.css">
+</head>
+<body>
+{Header} 
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record SO_Fact_Sabana_newSearch -->
+<form id="Panel1SO_Fact_Sabana_newSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Fresh1/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Buscar</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Fresh1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Panel1SO_Fact_Sabana_newSearchs_id_usuario">Id Usuario</label></td> 
+            <td>
+              <select id="Panel1SO_Fact_Sabana_newSearchs_id_usuario" name="{s_id_usuario_Name}">
+                <option selected value="">Seleccionar Valor</option>
+                {s_id_usuario_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Panel1SO_Fact_Sabana_newSearchs_id_periodo">Id Periodo</label></td> 
+            <td>
+              <select id="Panel1SO_Fact_Sabana_newSearchs_id_periodo" name="{s_id_periodo_Name}">
+                <option selected value="">Seleccionar Valor</option>
+                {s_id_periodo_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="Panel1SO_Fact_Sabana_newSearchButton_DoSearch" class="Button" alt="Buscar" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SO_Fact_Sabana_newSearch --><br>
+&nbsp; 
+<!-- BEGIN Grid SO_Fact_Sabana_new -->
+<table id="Panel1SO_Fact_Sabana_new" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Fresh1/Images/Spacer.gif"></td> 
+          <td class="th"><strong>Lista de registros cargados </strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Fresh1/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_ID_Proyecto --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_ID_Proyecto">ID Proyecto</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ID_Proyecto --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Administracion --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Administracion">Administracion</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Administracion --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Servicio_Negocio --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Servicio_Negocio">Servicio Negocio</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Servicio_Negocio --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Nombre_Rape --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Nombre_Rape">Nombre Rape</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Nombre_Rape --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Nombre_AS --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Nombre_AS">Nombre AS</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Nombre_AS --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Fabrica_Software --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Fabrica_Software">Fabrica Software</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Fabrica_Software --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Origen_requerimiento --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Origen_requerimiento">Origen Requerimiento</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Origen_requerimiento --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Fase_Real --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Fase_Real">Fase Real</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Fase_Real --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Semaforo_Fase_Real --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Semaforo_Fase_Real">Semaforo Fase Real</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Semaforo_Fase_Real --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Dependencia --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Dependencia">Dependencia</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Dependencia --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Area_Responsable_Dependencia --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Area_Responsable_Dependencia">Area Responsable Dependencia</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Area_Responsable_Dependencia --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Responsable_Dependencia --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Responsable_Dependencia">Responsable Dependencia</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Responsable_Dependencia --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Comentarios_AS --><span class="Sorter"><a href="{Sort_URL}" id="Panel1SO_Fact_Sabana_newSorter_Comentarios_AS">Comentarios AS</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascendente" src="Styles/Fresh1/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descendente" src="Styles/Fresh1/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_Comentarios_AS --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>&nbsp;{ID_Proyecto}</td> 
+          <td>{Administracion}&nbsp;</td> 
+          <td>{Servicio_Negocio}&nbsp;</td> 
+          <td>{Nombre_Rape}&nbsp;</td> 
+          <td>{Nombre_AS}&nbsp;</td> 
+          <td>{Fabrica_Software}&nbsp;</td> 
+          <td>{Origen_requerimiento}&nbsp;</td> 
+          <td>{Fase_Real}&nbsp;</td> 
+          <td>{Semaforo_Fase_Real}&nbsp;</td> 
+          <td>{Dependencia}&nbsp;</td> 
+          <td>{Area_Responsable_Dependencia}&nbsp;</td> 
+          <td>{Responsable_Dependencia}&nbsp;</td> 
+          <td>{Comentarios_AS}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="13">No hay registros</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="13"><a href="{SO_Fact_Sabana_new_Insert_Src}" id="Panel1SO_Fact_Sabana_newSO_Fact_Sabana_new_Insert">Agregar Nuevo</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Registro por página 
+            <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">Inicio</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Final</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Final <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+&nbsp;<!-- END Grid SO_Fact_Sabana_new --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record SO_Fact_Sabana_new1 -->
+<form id="Panel1Panel2SO_Fact_Sabana_new1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Fresh1/Images/Spacer.gif"></td> 
+            <td class="th"><strong>Agregar/Editar SO Fact Sabana New </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Fresh1/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">Id Registro</td> 
+            <td>{id_registro}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Fecha Carga</td> 
+            <td>{Fecha_Carga}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Id Periodo</td> 
+            <td>{id_periodo}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Id Usuario</td> 
+            <td>{id_usuario}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Num Carga</td> 
+            <td>{num_carga}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Num Renglon</td> 
+            <td>{num_renglon}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">ID Proyecto</td> 
+            <td>{ID_Proyecto}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Administracion</td> 
+            <td>{Administracion}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Servicio Negocio</td> 
+            <td>{Servicio_Negocio}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Nombre Rape</td> 
+            <td>{Nombre_Rape}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Nombre AS</td> 
+            <td>{Nombre_AS}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Fabrica Software</td> 
+            <td>{Fabrica_Software}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Origen Requerimiento</td> 
+            <td>{Origen_requerimiento}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Fase Real</td> 
+            <td>{Fase_Real}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Semaforo Fase Real</td> 
+            <td>{Semaforo_Fase_Real}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Dependencia</td> 
+            <td>{Dependencia}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Area Responsable Dependencia</td> 
+            <td>{Area_Responsable_Dependencia}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Responsable Dependencia</td> 
+            <td>{Responsable_Dependencia}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Comentarios AS</td> 
+            <td>{Comentarios_AS}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SO_Fact_Sabana_new1 --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 -->
+</body>
+</html>

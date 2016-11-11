@@ -1,0 +1,98 @@
+<html><head><style needdelete>td {border-style:dotted;border-width:1px;border-color:#aaaaaa;} table {border-style:dashed;border-width:1px;border-color:#aaaaaa;}</style><meta http-equiv="X-UA-Compatible" content="IE=7" toremove="toremove"/></head><body><meta ccsServiceable="true" content="text/html; charset=windows-1252" http-equiv="Content-Type"/>
+<script type="text/javascript"> 
+document.addEventListener("onload",hola());
+
+function hola(){
+ loadXMLDoc();
+        setInterval('loadXMLDoc()',60000);
+        
+        }
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange=function()
+{
+if (xmlhttp.readyState==4 && xmlhttp.status==200)
+{
+document.getElementById("clock").innerHTML=xmlhttp.responseText;
+}
+}
+xmlhttp.open("GET","clock.php",true);
+xmlhttp.send();
+}
+
+</script>
+<table style="BACKGROUND-COLOR: rgb(242,242,243)" width="100%" border="0" onload="alert('ggg')">
+  <tr style="HEIGHT: 80px">
+    <td>
+
+
+
+
+
+<span ccsType="Component" ccsId="11" ccsName="ImageLink1" style="white-space:nowrap;border-color:#9bc4ed;border-style:solid;border-width:1px" ccsServiceable="true" contentEditable="true"><a ccsServiceable="true"  href="{ImageLink1}" ccs_href="{ImageLink1}" id="HeaderImageLink1"><span style="white-space:nowrap" ccsBlockIsWhiteSpace="true" ccsServiceable="true"><img ccsServiceable="true" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{ImageLink1}" src="{hdLogoPath}" ccs_src="{hdLogoPath}" width="175" height="100"/></span></a></span> </td> 
+    <td width="84%" colspan="6" align="center"><input ccsServiceable="true" ccsId="12" ccsName="hdLogoPath" ccsType="Component" type="hidden" id="HeaderhdLogoPath" value="{hdLogoPath}" name="{hdLogoPath_Name}"/>
+      <h1>Administración Central de Desarrollo y Mantenimiento de Aplicaciones&nbsp;<br>
+      Soporte, Desarrollo y Mantenimiento de Aplicaciones – 4</h1>
+ </td> 
+  </tr>
+ 
+  <tr style="HEIGHT: 33px">
+    <td colspan="2">
+      <span contentEditable="true"  style="display:block; border-color: red; border: 1px dotted transparent; margin-top: 3px; padding: 3px;" ccsType="Component" ccsContentPlaceHolder="Panel2" ccsDesignColorSelection="true" ccsId="23" ccsServiceable="true" ccsName="Panel2" >
+      <table width="250">
+        <tr>
+          <td style="FONT-SIZE: 12px; WIDTH: 35%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
+            <div style="HEIGHT: 33px; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
+              &nbsp;<img ccsServiceable="true" id="imgBackTablero" style="MARGIN-TOP: 5px" alt="Regresar al tablero de control" src="{imgBackTableroPath}" ccs_src="{imgBackTableroPath}"/>&nbsp; <span ccsType="Component" ccsId="28" ccsName="BackTablero1" style="white-space:nowrap;border-color:#9bc4ed;border-style:solid;border-width:1px" ccsServiceable="true" contentEditable="true"><a ccsServiceable="true"  href="{BackTablero1_Src}" ccs_href="{BackTablero1_Src}" id="HeaderPanel2BackTablero1"><span style="white-space:nowrap" ccsBlockIsWhiteSpace="true" ccsServiceable="true">Regresar al Tablero</span></a></span> 
+            </div>
+ </td> 
+        </tr>
+ 
+      </table>
+ &nbsp;</span></td> 
+    <td width="170" align="left"></td> 
+    <td></td> 
+    <td></td> 
+    <td>
+      <span contentEditable="true"  style="display:block; border-color: red; border: 1px dotted transparent; margin-top: 3px; padding: 3px;" ccsType="Component" ccsContentPlaceHolder="Panel1" ccsDesignColorSelection="true" ccsId="13" ccsServiceable="true" ccsName="Panel1" >
+      <table style="BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px" width="557" align="right">
+        <tr style="HEIGHT: 33px">
+          <td style="FONT-SIZE: 12px; WIDTH: 28%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
+            <div style="HEIGHT: 33px; COLOR: #444444; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
+              <img ccsServiceable="true" style="MARGIN-TOP: 5px" alt="Histórico de cargas" src="{imgHistoricosPath}" ccs_src="{imgHistoricosPath}" width="20" height="20"/></img> <a ccsServiceable="true" href="historico2.php" ccs_href="historico2.php" id="HeaderPanel1LinkHC">Histórico de Cargas</a> 
+            </div>
+ </td> 
+          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
+            <div style="HEIGHT: 33px; COLOR: #444444; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
+              <img ccsServiceable="true" style="MARGIN-TOP: 5px" alt="Carga de Archivos" src="{imgCargaxlsPath}" ccs_src="{imgCargaxlsPath}" width="20" height="20"/></img><a ccsServiceable="true" href="carga_archivo.php" ccs_href="carga_archivo.php" id="HeaderPanel1LinkCA">Realizar carga</a> 
+            </div>
+ </td> 
+          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
+            <div style="HEIGHT: 33px; COLOR: #444444; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
+              <img ccsServiceable="true" style="MARGIN-TOP: 5px" src="{imgUserPath}" ccs_src="{imgUserPath}"/></img>&nbsp;&nbsp;Usuario:&nbsp;<span ccsId="8" ccsName="lSesion" ccsBlockIsWhiteSpace="true" style="white-space:nowrap;border-color:#bbbbbb;border-style:solid;border-width:1px" ccsType="Component" ccsServiceable="true" contentEditable="True">lSesion</span> 
+            </div>
+ </td> 
+          <td style="FONT-SIZE: 12px; WIDTH: 38%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
+            <div style="HEIGHT: 33px; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
+              &nbsp;<img ccsServiceable="true" id="HeaderImage1" style="MARGIN-TOP: 5px" alt="Cerrar Sesión" src="{imgCierrePath}" ccs_src="{imgCierrePath}"/>&nbsp; <span ccsType="Component" ccsId="10" ccsName="Link1" style="white-space:nowrap;border-color:#9bc4ed;border-style:solid;border-width:1px" ccsServiceable="true" contentEditable="true"><a ccsServiceable="true"  href="{Link1_Src}" ccs_href="{Link1_Src}" id="HeaderPanel1Link1"><span style="white-space:nowrap" ccsBlockIsWhiteSpace="true" ccsServiceable="true">Cerrar Sesión</span></a></span> 
+              <!--<img style="MARGIN-TOP: 0px; MARGIN-RIGHT: -2px" src="{imgCierre2Path}" ccs_src="{imgCierre2Path}">-->
+            </div>
+ </td> 
+        </tr>
+ 
+      </table>
+ &nbsp;</span></td> 
+  </tr>
+</table>
+
+
+</body></html>

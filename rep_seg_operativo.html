@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Login</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-2504AB44
+</script>
+<script src="ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//OnLoad Event Start @-2FD76255
+    actions["OnLoad"] = function (eventType, parameters) {
+        var result = true;
+//End OnLoad Event Start
+
+//Set Focus @7-3B4C23D4
+        /* may be wrong selector */ $(window).each(function(){ this.focus(); });
+//End Set Focus
+
+//OnLoad Event End @-A5B9ECB8
+        return result;
+    };
+//End OnLoad Event End
+
+//Event Binding @1-18912803
+    $(window).ccsBind(function() {
+        this.each(function(){ actions["OnLoad"].call(this); });
+    });
+//End Event Binding
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<!--<link rel="stylesheet" type="text/css" href="../tablero_integral/tablero_integral-master/TableroSLAs/Styles/{CCS_Style}/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="../tablero_integral/tablero_integral-master/TableroSLAs/Styles/{CCS_Style}/jquery-ui.css"> -->
+<link rel="stylesheet" type="text/css" href="Styles/Fresh1/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="Styles/Fresh1/jquery-ui.css">
+<style type="text/css"> 
+ /* base semi-transparente */
+    .overlay{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index:1001;
+  opacity:.75;
+        -moz-opacity: 0.75;
+        filter: alpha(opacity=75);
+    }
+ 
+    /* estilo para la ventana modal */
+    .modal {
+        display: none;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+        width: 60%;
+        height: 450px;
+        padding: 16px;
+        background: #fff;
+  color: #333;
+        z-index:1002;
+        overflow: auto;
+        border-style: solid;
+                border-color: blue;
+                border-width: 1px;
+                font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+{Header} 
+<table style="BACKGROUND-COLOR: rgb(242,242,243)" width="100%" border="0">
+  <tr>
+    <td style="align: center">&nbsp;&nbsp; 
+      <p>{lReportContent}</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+ 
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

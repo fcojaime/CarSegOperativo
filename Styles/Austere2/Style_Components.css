@@ -1,0 +1,1113 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorAustere2 {
+	background-color: #dde1ca;
+	}
+
+.FormTitleBgColorAustere2 {
+	background-color: #40a140;
+	}
+
+.FormTitleFontColorAustere2 {
+	color: #fcfcfc;
+	}
+
+.CaptionBgColorAustere2 {
+	background-color: #d0df85;
+	}
+
+.CaptionFontColorAustere2 {
+	color: #000000;
+	}
+
+.DataBgColorAustere2 {
+	background-color: #f4f4f4;
+	}
+
+.AltDataBgColorAustere2 {
+	background-color: #f1f4e3;
+	}
+
+.DataFontColorAustere2 {
+	color: #000000;
+	}
+
+.LinkColorAustere2 {
+	color: #0031c5;
+	}
+
+.VisitedLinkColorAustere2 {
+	color: #800000;
+	}
+
+.HoverLinkColorAustere2 {
+	color: #f70000;
+	}
+
+.ColorBgButtonAustere2 {
+	background-color: #40a140;
+}
+
+.ColorFontButtonAustere2 {
+	color: #fcfcfc;
+}
+
+.ColorBgButtonPassiveAustere2 {
+	background-color: #8fe18f;
+}
+
+.ColorFontButtonPassiveAustere2 {
+	color: #fcfcfc;
+}
+
+
+
+.HeaderAustere2 {
+	width: 100%;
+	}
+
+.HeaderAustere2 th { 
+	font-family: Arial; font-size: 90%; font-weight: bold; text-align: center !important;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #fcfcfc;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+
+/*ie6*/
+* html body .HeaderAustere2 th {
+	font-family: Arial; font-size: 130%; font-weight: bold; text-align: center !important;
+}
+/*end*/
+
+.HeaderAustere2 a:link { 
+	color: #fcfcfc;
+	}
+
+.HeaderAustere2 a:visited { 
+	color: #fcfcfc;
+	}
+
+.HeaderAustere2 a:hover, .CaptionAustere2 a:active { 
+	color: #fcfcfc; text-decoration: none;
+	}
+
+.HeaderLeftAustere2 { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightAustere2 { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftAustere2 img{
+	width: 9px;
+	}
+
+.HeaderRightAustere2 img{
+	width: 9px;
+	}
+
+
+/* Grid Options */
+.GridAustere2 { 
+	
+	width: 100%;
+	}
+
+.CaptionAustere2 th { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #d0df85; color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionAustere2 td { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #d0df85; color: #000000;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .CaptionAustere2 th, * html body .CaptionAustere2 td {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionAustere2 a:link { 
+	color: #000000;
+	}
+
+.CaptionAustere2 a:visited { 
+	color: #000000;
+	}
+
+.CaptionAustere2 a:hover, .CaptionAustere2 a:active { 
+	color: #f70000;
+	}
+
+.CaptionAustere2 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionAustere2 input {
+	vertical-align: middle;
+	}
+
+.RowAustere2 th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	color: #000000;
+	}
+	
+
+
+/*ie6*/
+* html body .RowAustere2 th, * html body .RowAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+caption.RowAustere2 { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body caption.RowAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.RowAustere2 a:link { 
+	color: #0031c5;
+	}
+
+.RowAustere2 a:visited { 
+	color: #800000;
+	}
+
+.RowAustere2 a:hover, .RowAustere2 a:active { 
+	color: #f70000;
+	}
+
+.SeparatorAustere2{
+	color: #40a140;
+	}
+
+.SeparatorAustere2 td{
+	height: 1px;
+	}
+
+
+.AltRowAustere2 th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f4e3; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .AltRowAustere2 th, * html body .AltRowAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.AltRowAustere2 a:link { 
+	color: #0031c5;
+	}
+
+.AltRowAustere2 a:visited { 
+	color: #800000;
+	}
+
+.AltRowAustere2 a:hover, .AltRowAustere2 a:active { 
+	color: #f70000;
+	}
+
+.NoRecordsAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	background-color: #f4f4f4; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	
+	background-color: #f4f4f4; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecordsAustere2 td, * html body .FooterAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.FooterAustere2 a:link { 
+	color: #0031c5;
+	}
+
+.FooterAustere2 a:visited { 
+	color: #800000;
+	}
+
+.FooterAustere2 a:hover, .FooterAustere2 a:active { 
+	color: #f70000;
+	}
+
+.FooterAustere2 img {
+	border: 0px;
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterAustere2 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordAustere2 { 
+	
+	width: 100%;
+	}
+
+.ErrorAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	}
+
+
+
+/*ie6*/
+* html body .ErrorAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.ControlsAustere2 th { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f4f4f4; 
+	color: #000000;
+	}
+
+.ControlsAustere2 .CaptionAustere2 th {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #d0df85; color: #000000;
+	font-weight: bold;
+	white-space: nowrap;
+	}	
+.BottomAustere2 td { 
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	
+	background-color: #f4f4f4; color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .ControlsAustere2 th, * html body .ControlsAustere2 td, * html body .BottomAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.BottomAustere2 a:link { 
+	color: #0031c5;
+	}
+
+.BottomAustere2 a:visited { 
+	color: #800000;
+	}
+
+.BottomAustere2 a:hover, .CaptionAustere2 a:active { 
+	color: #f70000;
+	}
+
+.BottomAustere2 img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomAustere2 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionAustere2 th{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f1f4e3; 
+	color: #000000;
+	}
+
+.GroupCaptionAustere2 td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f4f4f4; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaptionAustere2 th, * html body .GroupCaptionAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionAustere2 a:link {
+	color: #000000;
+	}
+
+.GroupCaptionAustere2 a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionAustere2 a:hover, .GroupCaptionAustere2 a:active{
+	color: #f70000;
+	}
+
+.GroupFooterAustere2 td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #d0df85; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFooterAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterAustere2 a:link {
+	color: #0031c5;
+	}
+
+.GroupFooterAustere2 a:visited{
+	color: #800000;
+	}
+
+.GroupFooterAustere2 a:hover, .GroupFooterAustere2 a:active{
+	color: #f70000;
+	}
+
+.GroupFooterAustere2 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterAustere2 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalAustere2 td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f1f4e3; 
+	color: #000000;
+	border-bottom: 2px solid #40a140;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotalAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.SubTotalAustere2 a:link {
+	color: #0031c5;
+	}
+
+.SubTotalAustere2 a:visited{
+	color: #800000;
+	}
+
+.SubTotalAustere2 a:hover, .SubTotalAustere2 a:active{
+	color: #f70000;
+	}
+
+.TotalAustere2 td{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #f1f4e3; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .TotalAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.TotalAustere2 a:link {
+	color: #0031c5;
+	}
+
+.TotalAustere2 a:visited{
+	color: #800000;
+	}
+
+.TotalAustere2 a:hover, .TotalAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Form Options */
+.ButtonAustere2 { 
+	background-color: #40a140; color: #fcfcfc; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 10px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarAustere2 { 
+	
+	width: 100%;
+	}
+
+.CalendarWeekdayNameAustere2{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #f1f4e3; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNameAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarWeekdayNameAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarWeekdayNameAustere2 a:hover, .CalendarWeekdayNameAustere2 a:active{
+	color: #f70000;
+	}
+
+.CalendarWeekendNameAustere2{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #f1f4e3;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendNameAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNameAustere2 a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameAustere2 a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameAustere2 a:link, .CalendarWeekendNameAustere2 a:visited{
+	color: #f70000;
+	}
+
+/* Calendar Day */
+.CalendarDayAustere2{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarDayAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarDayAustere2 a:hover, .CalendarDayAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendAustere2{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #f1f4e3;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarWeekendAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarWeekendAustere2 a:hover, .CalendarWeekendAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Today */
+.CalendarTodayAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #40a140;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarTodayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarTodayAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarTodayAustere2 a:hover, .CalendarTodayAustere2 a:active {
+	color: #f70000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #40a140;
+	text-align: center;
+	background-color: #f1f4e3;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarWeekendTodayAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarWeekendTodayAustere2 a:hover, .CalendarWeekendTodayAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayAustere2{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #40a140;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayAustere2 a:link {
+	color: #40a140;
+	}
+
+.CalendarOtherMonthDayAustere2 a:visited{
+	color: #40a140;
+	}
+
+.CalendarOtherMonthDayAustere2 a:hover, .CalendarOtherMonthDayAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #40a140;
+	text-align: center;
+	background-color: #f4f4f4;	
+	color: #40a140;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayAustere2 a:link {
+	color: #40a140;
+	}
+
+.CalendarOtherMonthTodayAustere2 a:visited{
+	color: #40a140;
+	}
+
+.CalendarOtherMonthTodayAustere2 a:hover, .CalendarOtherMonthTodayAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: center;
+	background-color: #f1f4e3;	
+	color: #40a140;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendAustere2 a:link {
+	color: #40a140;
+	}
+
+.CalendarOtherMonthWeekendAustere2 a:visited{
+	color: #40a140;
+	}
+
+.CalendarOtherMonthWeekendAustere2 a:hover, .CalendarOtherMonthWeekendAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 0px;
+	border: 2px solid #40a140;
+	text-align: center;
+	color: #40a140;
+	background-color: #f1f4e3;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayAustere2 a:link {
+	color: #40a140;
+	}
+
+.CalendarOtherMonthWeekendTodayAustere2 a:visited{
+	color: #40a140;
+	}
+
+.CalendarOtherMonthWeekendTodayAustere2 a:hover, .CalendarOtherMonthWeekendTodayAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayAustere2{
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #d0df85;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDayAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayAustere2 a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayAustere2 a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayAustere2 a:hover, .CalendarSelectedDayAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	background-color: #f4f4f4; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarNavigatorAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarNavigatorAustere2 a:hover, .CalendarNavigatorAustere2 a:active{
+	color: #f70000;
+	}
+
+.CalendarNavigatorAustere2 img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorAustere2 td {
+	font-family: Arial; font-size: 70%;
+	}
+
+.CalendarNavigatorAustere2 th {
+	font-family: Arial; font-size: 70%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorAustere2 th, * html body .CalendarNavigatorAustere2 td {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventAustere2{
+	font-family: Arial; font-size: 70%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEventAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventAustere2 a:link {
+	color: #0031c5;
+	}
+
+.CalendarEventAustere2 a:visited{
+	color: #800000;
+	}
+
+.CalendarEventAustere2 a:hover, .CalendarEventAustere2 a:active{
+	color: #f70000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thAustere2 { 
+	font-family: Arial; font-size: 70%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .thAustere2 {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderAustere2 .thAustere2 { 
+	font-family: Arial; font-size: 90%; font-weight: bold; text-align: center !important;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif');  color: #fcfcfc;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .HeaderAustere2 .thAustere2 {
+	font-family: Arial; font-size: 130%; font-weight: bold; text-align: center !important;
+}
+/*end*/
+
+.CaptionAustere2 .thAustere2 { 
+	font-family: Arial; font-size: 70%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #d0df85; color: #000000;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .CaptionAustere2 .thAustere2 {
+	font-family: Arial; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowAustere2 .thAustere2 { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowAustere2 .thAustere2 { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsAustere2 .thAustere2 { 
+	font-family: Arial; font-size: 70%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	background-color: #f4f4f4; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionAustere2 .thAustere2 {
+	font-family: Arial; font-size: 70%;
+	padding: 2px;
+	border-bottom: solid 2px #FFFFFF;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f1f4e3; 
+	color: #000000;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaptionAustere2 .thAustere2 {
+	font-family: Arial; font-size: 100%;
+}
+
+* html body .RowAustere2 .thAustere2, * html body .AltRowAustere2 .thAustere2, * html body .ControlsAustere2 .thAustere2 {
+	font-family: Arial; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuAustere2 td {
+	font-family: Arial; font-size: 70%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenuAustere2 td {
+	font-family: Arial; font-size: 100%;
+} 
+/*end*/
+
+.SorterAustere2 img, .NavigatorAustere2 img {
+	border:0;
+}
+
+.MainTable .HeaderAustere2 img, .MainTable .HeaderAustere2 td {
+	padding-left: 0;padding-right: 0;margin:0;
+}
