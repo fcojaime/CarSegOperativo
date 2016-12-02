@@ -64,7 +64,7 @@ class clsHeader { //Header class @1-CC982CB1
     }
 //End Operations Method
 
-//Initialize Method @1-FE587D5A
+//Initialize Method @1-02E8168D
     function Initialize($Path = "")
     {
         global $FileName;
@@ -82,19 +82,28 @@ class clsHeader { //Header class @1-CC982CB1
         $this->Attributes = & $this->Parent->Attributes;
 
         // Create Components
+        $this->ImageLink1 = new clsControl(ccsImageLink, "ImageLink1", "ImageLink1", ccsText, "", CCGetRequestParam("ImageLink1", ccsGet, NULL), $this);
+        $this->ImageLink1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+        $this->ImageLink1->Page = "";
         $this->hdLogoPath = new clsControl(ccsHidden, "hdLogoPath", "hdLogoPath", ccsText, "", CCGetRequestParam("hdLogoPath", ccsGet, NULL), $this);
         $this->Panel1 = new clsPanel("Panel1", $this);
+        $this->lSesion = new clsControl(ccsLabel, "lSesion", "lSesion", ccsText, "", CCGetRequestParam("lSesion", ccsGet, NULL), $this);
+        $this->Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $this);
+        $this->Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+        $this->Link1->Page = $this->RelativePath . "Logout.php";
+        $this->Panel2 = new clsPanel("Panel2", $this);
         $this->BackTablero1 = new clsControl(ccsLink, "BackTablero1", "BackTablero1", ccsText, "", CCGetRequestParam("BackTablero1", ccsGet, NULL), $this);
         $this->BackTablero1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
         $this->BackTablero1->Page = "/mymsdma4/Index.php";
-        $this->Panel2 = new clsPanel("Panel2", $this);
-        $this->Panel1->AddComponent("BackTablero1", $this->BackTablero1);
+        $this->Panel1->AddComponent("lSesion", $this->lSesion);
+        $this->Panel1->AddComponent("Link1", $this->Link1);
+        $this->Panel2->AddComponent("BackTablero1", $this->BackTablero1);
         $this->BindEvents();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnInitializeView", $this);
     }
 //End Initialize Method
 
-//Show Method @1-C14D163B
+//Show Method @1-359D5407
     function Show()
     {
         global $Tpl;
@@ -113,6 +122,7 @@ class clsHeader { //Header class @1-CC982CB1
             return "";
         }
         $this->Attributes->Show();
+        $this->ImageLink1->Show();
         $this->hdLogoPath->Show();
         $this->Panel1->Show();
         $this->Panel2->Show();

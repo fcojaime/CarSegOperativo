@@ -30,60 +30,43 @@ xmlhttp.send();
 }
 
 </script>
-<table style="BACKGROUND-COLOR: rgb(242,242,243)" width="100%" border="0" onload="alert('ggg')">
-  <tr style="HEIGHT: 80px">
-    <td><a href="{ImageLink1}" id="HeaderImageLink1"><img style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{ImageLink1}" src="{hdLogoPath}" width="175" height="100"></a> </td> 
-    <td width="84%" colspan="6" align="center"><input type="hidden" id="HeaderhdLogoPath" value="{hdLogoPath}" name="{hdLogoPath_Name}">
-      <h1>Administración Central de Desarrollo y Mantenimiento de Aplicaciones&nbsp;<br>
-      Soporte, Desarrollo y Mantenimiento de Aplicaciones – 4</h1>
+<table style="HEIGHT: 50px; BACKGROUND-COLOR: rgb(242,242,243)" width="100%" border="0" onload="alert('ggg')">
+  <tr style="HEIGHT: 50px">
+    <td></td> 
+    <td width="89%" colspan="6" align="center"><input type="hidden" id="HeaderhdLogoPath" value="{hdLogoPath}" name="{hdLogoPath_Name}">
+      <h1>Seguimiento Operativo</h1>
  </td> 
-  </tr>
- 
-  <tr style="HEIGHT: 33px">
-    <td colspan="2">
+    <td>
       <!-- BEGIN Panel Panel2 -->
-      <table width="250">
-        <tr>
-          <td style="FONT-SIZE: 12px; WIDTH: 35%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
-            <div style="HEIGHT: 33px; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
-              &nbsp;<img id="imgBackTablero" style="MARGIN-TOP: 5px" alt="Regresar al tablero de control" src="{imgBackTableroPath}">&nbsp; <a href="{BackTablero1_Src}" id="HeaderPanel2BackTablero1">Regresar al Tablero</a> 
+      <table width="100" border="0">
+        <tr align="right">
+          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173)">
+            <div style="HEIGHT: 23px; COLOR: #444444; BACKGROUND-COLOR: rgb(242,242,243); MARGIN-RIGHT: 0px">
+<a href="carga_archivo.php" id="HeaderPanel1LinkCA">Sábana</a> 
+            </div>
+ </td> 
+        </tr>
+ <!-- END Panel Panel2 -->
+        <tr style="HEIGHT: 23px" align="right">
+          <!-- BEGIN Panel Panel1 -->
+          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173)">
+            <div style="HEIGHT: 23px; BACKGROUND-COLOR: rgb(242,242,243); ALIGN: RIGHT">
+<a href="{BackTablero1_Src}" id="HeaderPanel1BackTablero1">Reportes</a> 
             </div>
  </td> 
         </tr>
  
-      </table>
- <!-- END Panel Panel2 --></td> 
-    <td width="170" align="left"></td> 
-    <td></td> 
-    <td></td> 
-    <td>
-      <!-- BEGIN Panel Panel1 -->
-      <table style="BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px" width="557" align="right">
-        <tr style="HEIGHT: 33px">
-          <td style="FONT-SIZE: 12px; WIDTH: 28%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
-            <div style="HEIGHT: 33px; COLOR: #444444; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
-              <img style="MARGIN-TOP: 5px" alt="Histórico de cargas" src="{imgHistoricosPath}" width="20" height="20"></img> <a href="historico2.php" id="HeaderPanel1LinkHC">Histórico de Cargas</a> 
-            </div>
- </td> 
-          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
-            <div style="HEIGHT: 33px; COLOR: #444444; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
-              <img style="MARGIN-TOP: 5px" alt="Carga de Archivos" src="{imgCargaxlsPath}" width="20" height="20"></img><a href="carga_archivo.php" id="HeaderPanel1LinkCA">Realizar carga</a> 
-            </div>
- </td> 
-          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
-            <div style="HEIGHT: 33px; COLOR: #444444; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
-              <img style="MARGIN-TOP: 5px" src="{imgUserPath}"></img>&nbsp;&nbsp;Usuario:&nbsp;{lSesion} 
-            </div>
- </td> 
-          <td style="FONT-SIZE: 12px; WIDTH: 38%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173); BACKGROUND-COLOR: rgb(222,222,213)">
-            <div style="HEIGHT: 33px; MARGIN-LEFT: 0px; BACKGROUND-COLOR: rgb(242,242,243)">
-              &nbsp;<img id="HeaderImage1" style="MARGIN-TOP: 5px" alt="Cerrar Sesión" src="{imgCierrePath}">&nbsp; <a href="{Link1_Src}" id="HeaderPanel1Link1">Cerrar Sesión</a> 
+        <tr style="HEIGHT: 23px" align="right">
+          <td style="FONT-SIZE: 12px; WIDTH: 25%; FONT-WEIGHT: bold; COLOR: rgb(0,122,173)">
+            <div style="HEIGHT: 23px; BACKGROUND-COLOR: rgb(242,242,243); MARGIN-RIGHT: 0px">
+<a href="../mymsdma4/Logout.php" id="HeaderLink1">Cerrar Sesión</a> 
               <!--<img style="MARGIN-TOP: 0px; MARGIN-RIGHT: -2px" src="{imgCierre2Path}">-->
             </div>
  </td> 
         </tr>
  
       </table>
- <!-- END Panel Panel1 --></td> 
+ </td> 
   </tr>
 </table>
+<!-- END Panel Panel1 -->

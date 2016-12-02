@@ -41,7 +41,7 @@ function Page_BeforeShow(& $sender)
 		                                     
 					global $lReportContent;
 					//$lReportContent->SetValue("<div style='overflow:auto; width:1000px; height:700px' >" . $result_html . "</div>");
-					$lReportContent->SetValue("<center><iframe  id='rep_metri'   width='100%' height='920px' scrolling='no'  frameborder=0 src=VerReporteVistaLogin.aspx?urlreporte=" . $REPORT . "&fullscreen=1></iframe></center>");
+					$lReportContent->SetValue("<center><iframe  id='rep_metri'   width='100%' height='950px' scrolling='no'  frameborder=0 style='BACKGROUND-COLOR: rgb(242,242,243)' src=VerReporteVistaLogin.aspx?urlreporte=" . $REPORT . "&fullscreen=1></iframe></center>");
     
 // -------------------------
 //End Custom Code

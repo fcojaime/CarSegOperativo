@@ -47,11 +47,11 @@ function Header_BeforeShow(& $sender)
     	$Component->Panel2->Visible=false;    	 
     } else {
     	//$Component->lSesion->SetValue(CCGetUserLogin());
-    	//$Component->lSesion->SetValue(CCGetSession('NombreCorto'));
+    	$Component->lSesion->SetValue(CCGetSession('NombreCorto'));
     }
   
     	//$Component->Panel2->Visible=true;
-    /*						   
+    						   
     if(CCGetGroupID()<5){
     	$Component->pnlMenu->Visible=false;
     }
@@ -65,7 +65,6 @@ function Header_BeforeShow(& $sender)
     	$Component->Panel4->Visible=true;
     	//echo"";
     }
-    */
 // -------------------------
 //End Custom Code
 

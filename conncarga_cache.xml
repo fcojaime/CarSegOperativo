@@ -357,7 +357,17 @@
       <table TABLE_NAME="SO_grupo_proveedor" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
       <table TABLE_NAME="SO_layouts" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
       <table TABLE_NAME="SO_periodos_carga" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="SO_usuario" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SO_usuario" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="id_usuario" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" full="True" />
+        <column COLUMN_NAME="nombre_usuario" ORDINAL_POSITION="2" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="False" full="True" />
+        <column COLUMN_NAME="usuario" ORDINAL_POSITION="3" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="False" full="True" />
+        <column COLUMN_NAME="password" ORDINAL_POSITION="4" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="False" full="True" />
+        <column COLUMN_NAME="nivel" ORDINAL_POSITION="5" DATA_TYPE="2" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int16" NUMERIC_PRECISION="10" IS_NULLABLE="False" full="True" />
+        <column COLUMN_NAME="id_proveedor" ORDINAL_POSITION="6" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" full="True" />
+        <column COLUMN_NAME="capc_cds" ORDINAL_POSITION="7" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" OCTET_LENGTH="20" IS_NULLABLE="True" full="True" />
+        <column COLUMN_NAME="nom_arch_so" ORDINAL_POSITION="8" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" full="True" />
+        <primaryKey PK_COLUMN_NAME="id_usuario" KEY_NAME="id_usuario" ENABLED="True" full="True" />
+      </table>
       <table TABLE_NAME="sysdiagrams" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
       <table TABLE_NAME="tmp_CUADROS_ESTAD1" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
       <table TABLE_NAME="periodos_hist" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />

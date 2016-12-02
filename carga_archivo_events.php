@@ -203,7 +203,7 @@ function NewRecord1_OnValidate(& $sender)
 	    	//$num_intentos_permitidos=CCDLookUp("num_intentos_permitidos","SO_periodos_carga"," id_periodo=".$ConnCarga->ToSQL($id_periodo, ccsInteger),   $ConnCarga);
 	        //$tipo_carga=CCDLookUp("tipo_periodo","SO_periodos_carga"," id_periodo=".$ConnCarga->ToSQL($id_periodo, ccsInteger),   $ConnCarga);
 	       	     
-       		$num_intentos_hechos=ObtenIntentosHechosPorPeriodo($id_proveedor,$id_periodo,$ids_layouts[0][2]);
+       		$num_intentos_hechos=ObtenIntentosHechosPorPeriodo($id_usuario,$id_periodo,$ids_layouts[0][2]);
        		// $NewRecord1->Errors->addError("num_intentos_hechos $num_intentos_hechos id_proveedor $id_proveedor, id_periodo $id_periodo, tabla ".$ids_layouts[0][2] );			 
      
     		if ( $ids_layouts[0][0]>0 && $ids_layouts[0][1] !="" ){ //sí encontró al menos un layout
@@ -274,13 +274,16 @@ function NewRecord1_OnValidate(& $sender)
 					   		 die('Error loading file "' . pathinfo($inputFileName, PATHINFO_BASENAME) 
 					    	. '": ' . $e->getMessage());
 						}
-		      		 	$validacionesSQL=ValidaInfoCargada($id_proveedor,$id_registro );
+		      		 	$validacionesSQL=ValidaInfoCargada($id_usuario,$id_registro );
 		      			$num_errorValidaciones=count($validacionesSQL);
 				
 				 		if($num_errorValidaciones>1 || $validacionesSQL[0][0]==-1){
 						 	//muestra errores	
 						 	$errores_datos="SI";
 						 	$NewRecord1->Aplicar->Visible=false; 
+						 	$ssql = "Delete from SO_Fact_Sabana where id_usuario=$id_usuario and id_periodo=$id_periodo "; 
+		               		$ConnCarga->query($ssql);
+			     			$num_erro=$ConnCarga->Errors->Count();
 						 	for($n=0; $n<$num_errorValidaciones; $n++){
 		       	        			$NewRecord1->Errors->addError($cadFormatoRedini .$validacionesSQL[$n][1].$cadFormatofin);
 						 	}
@@ -766,7 +769,7 @@ function ValidaInfoCargada($id_proveedor,$id_registro )
 	//proyectos
 	$cad_fallas="No existen los requerimientos siguientes: ";
 	$num_fallas=0;	
-	$ssql = " select s.ID_PROYECTO, s.num_renglon from SO_Fact_Sabana  s where s.ID_Proyecto not in (select distinct ID_Proyecto from [SO_V_Fact_Requerimientos]  where  ID_Proyecto is not null)  and id_registro=$id_registro and id_usuario=$id_proveedor order by 2 "; 
+	$ssql = " select s.ID_PROYECTO, s.num_renglon from SO_Fact_Sabana  s where s.ID_Proyecto not in (select distinct ID_Proyecto from [SO_Fact_ROSyROP]  where  ID_Proyecto is not null)  and id_registro=$id_registro and id_usuario=$id_proveedor order by 2 "; 
 	//echo $ssql;
 	$db->query($ssql);
 	while ($db->next_record() ) {  		         
@@ -1007,6 +1010,121 @@ function ValidaInfoCargada($id_proveedor,$id_registro )
 	    $salida[$n_error][1]=$cad_fallas;
 	    $n_error++;
 	}
+	
+	// New LlaveAdminFechaPPM
+	$cad_fallas="Los siguientes ID PPM están duplicados para una misma administración: ";
+	$num_fallas=0;	
+	$ssql = "select   s1.ID_Proyecto, s1.num_renglon, s1.Administracion from SO_Fact_Sabana s1
+			inner join 
+			(select s.id_periodo, s.ID_Proyecto, s.Administracion, COUNT(*) repetidos from SO_Fact_Sabana  s 
+				where s.id_registro=$id_registro and s.id_usuario=$id_proveedor 
+				group by s.id_periodo, s.ID_Proyecto, s.Administracion ) r 
+			on r.Administracion=s1.Administracion and r.id_periodo=s1.id_periodo and r.ID_Proyecto=s1.ID_Proyecto
+			where r.repetidos>1
+			and s1.id_registro=$id_registro and s1.id_usuario=$id_proveedor 
+			order by s1.ID_Proyecto, s1.num_renglon";
+	//$ssql = "select s.Dependencia, s.num_renglon from SO_Fact_Sabana  s where s.Dependencia not in (select distinct Dependencia from SO_Cat_Dependencias_Req ) and id_registro=$id_registro and id_usuario=$id_proveedor order by 2 "; 
+	//echo $ssql;
+	$db->query($ssql);
+	while ($db->next_record() ) {  		         
+	    $ID_Proyecto=$db->f(0);	
+	    $num_renglon=$db->f(1); 	     
+	    if(is_null($num_renglon)) {
+	    	$num_fallas=0;	
+	    	$cad_fallas="";
+	    }
+	    else {
+	        $num_fallas++;   
+	    	$cad_fallas.="$num_renglon.- $ID_Proyecto, ";   
+	    }	
+	} // while  	
+	if ($num_fallas>0){
+		$salida[$n_error][0]=-1;
+	    $salida[$n_error][1]=$cad_fallas;
+	    $n_error++;
+	}
+	 
+	// New valida DEpendencia
+	$cad_fallas="Los sig. ID_PPM si tienen Dependencia, pero no tienen Area_Responsable_Dependencia o Responsable_Dependencia :";
+	$num_fallas=0;	
+	$ssql ="select s1.ID_Proyecto, s1.num_renglon, s1.Administracion from SO_Fact_Sabana s1
+	where s1.Dependencia<>'' and (s1.Area_Responsable_Dependencia='' or s1.Area_Responsable_Dependencia is null or s1.Responsable_Dependencia='' or s1.Responsable_Dependencia is null)
+	and s1.id_registro=$id_registro and s1.id_usuario=$id_proveedor 
+	order by s1.num_renglon";
+	//echo $ssql;
+	$db->query($ssql);
+	while ($db->next_record() ) {  		         
+	    $ID_Proyecto=$db->f(0);	
+	    $num_renglon=$db->f(1); 	     
+	    if(is_null($num_renglon)) {
+	    	$num_fallas=0;	
+	    	$cad_fallas="";
+	    }
+	    else {
+	        $num_fallas++;   
+	    	$cad_fallas.="$num_renglon.- $ID_Proyecto, ";   
+	    }	
+	} // while  	
+	if ($num_fallas>0){
+		$salida[$n_error][0]=-1;
+	    $salida[$n_error][1]=$cad_fallas;
+	    $n_error++;
+	}
+	
+	// New valida  Area Resp DEpendencia
+	$cad_fallas="Los sig. ID_PPM si tienen Area_Responsable_Dependencia, pero no tienen Dependencia o Responsable_Dependencia :";
+	$num_fallas=0;	
+	$ssql ="select s1.ID_Proyecto, s1.num_renglon, s1.Administracion from SO_Fact_Sabana s1
+	where s1.Area_Responsable_Dependencia<>'' and (s1.Dependencia='' or s1.Dependencia is null or s1.Responsable_Dependencia='' or s1.Responsable_Dependencia is null)
+    and s1.id_registro=$id_registro and s1.id_usuario=$id_proveedor 
+	order by s1.num_renglon";
+	//echo $ssql;
+	$db->query($ssql);
+	while ($db->next_record() ) {  		         
+	    $ID_Proyecto=$db->f(0);	
+	    $num_renglon=$db->f(1); 	     
+	    if(is_null($num_renglon)) {
+	    	$num_fallas=0;	
+	    	$cad_fallas="";
+	    }
+	    else {
+	        $num_fallas++;   
+	    	$cad_fallas.="$num_renglon.- $ID_Proyecto, ";   
+	    }	
+	} // while  	
+	if ($num_fallas>0){
+		$salida[$n_error][0]=-1;
+	    $salida[$n_error][1]=$cad_fallas;
+	    $n_error++;
+	}
+	
+	// New valida  Responsable_Dependencia
+	$cad_fallas="Los sig. ID_PPM si tienen Responsable_Dependencia , pero no tienen Dependencia o Area_Responsable_Dependencia :";
+	$num_fallas=0;	
+	$ssql ="select s1.ID_Proyecto, s1.num_renglon, s1.Administracion from SO_Fact_Sabana s1
+	where s1.Responsable_Dependencia<>'' and (s1.Dependencia='' or s1.Dependencia is null or s1.Area_Responsable_Dependencia='' or s1.Area_Responsable_Dependencia is null)
+	and  s1.id_registro=$id_registro and s1.id_usuario=$id_proveedor 
+	order by s1.num_renglon";
+	//echo $ssql;
+	$db->query($ssql);
+	while ($db->next_record() ) {  		         
+	    $ID_Proyecto=$db->f(0);	
+	    $num_renglon=$db->f(1); 	     
+	    if(is_null($num_renglon)) {
+	    	$num_fallas=0;	
+	    	$cad_fallas="";
+	    }
+	    else {
+	        $num_fallas++;   
+	    	$cad_fallas.="$num_renglon.- $ID_Proyecto, ";   
+	    }	
+	} // while  	
+	if ($num_fallas>0){
+		$salida[$n_error][0]=-1;
+	    $salida[$n_error][1]=$cad_fallas;
+	    $n_error++;
+	}
+	
 	
 	return $salida;
 	
