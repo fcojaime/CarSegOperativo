@@ -1125,6 +1125,30 @@ function ValidaInfoCargada($id_proveedor,$id_registro )
 	    $n_error++;
 	}
 	
+	//New new Prioridad
+	$cad_fallas="No existen las Prioridades siguientes: ";
+	$num_fallas=0;	
+	$ssql = "  select s.Prioridad, s.num_renglon from SO_Fact_Sabana  s where s.Prioridad not in (select distinct Prioridad from SO_Cat_Prioridad ) and id_registro=$id_registro and id_usuario=$id_proveedor order by 2"; 
+	//echo $ssql;
+	$db->query($ssql);
+	while ($db->next_record() ) {  		         
+	    $Prioridad=$db->f(0);	
+	    $num_renglon=$db->f(1); 	     
+	    if(is_null($num_renglon)) {
+	    	$num_fallas=0;	
+	    	$cad_fallas="";
+	    }
+	    else {
+	        $num_fallas++;   
+	    	$cad_fallas.="$num_renglon.- $Prioridad, ";   
+	    }	
+	} // while  	
+	if ($num_fallas>0){
+		$salida[$n_error][0]=-1;
+	    $salida[$n_error][1]=$cad_fallas;
+	    $n_error++;
+	}
+	
 	
 	return $salida;
 	
